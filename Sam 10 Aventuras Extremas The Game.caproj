@@ -277,6 +277,7 @@
                 <instance-variable name="vida" sid="9216126168673814" type="number" />
                 <instance-variable name="daño" sid="1301773990831832" type="number" />
                 <instance-variable name="Rh" sid="2617622686178716" type="number" />
+                <instance-variable comment="tiempo en que dura eletrificado" name="tiempoEle" sid="6173935294883258" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="9037720695909917">

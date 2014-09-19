@@ -151,6 +151,7 @@
                         <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
+                        <tiempoEle>2</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -193,6 +194,7 @@
                         <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
+                        <tiempoEle>2</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -235,6 +237,7 @@
                         <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
+                        <tiempoEle>2</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -277,6 +280,7 @@
                         <vida>1000</vida>
                         <daño>50</daño>
                         <Rh>16</Rh>
+                        <tiempoEle>1</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -319,6 +323,7 @@
                         <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
+                        <tiempoEle>2</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -361,6 +366,7 @@
                         <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
+                        <tiempoEle>2</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -425,6 +431,7 @@
                         <vida>1000</vida>
                         <daño>50</daño>
                         <Rh>16</Rh>
+                        <tiempoEle>1</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -467,6 +474,7 @@
                         <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
+                        <tiempoEle>2</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -509,6 +517,7 @@
                         <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
+                        <tiempoEle>2</tiempoEle>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
