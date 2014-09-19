@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>mapa 1</name>
+    <events>
+        <variable constant="0" name="score" sid="3755862219849961" static="0" type="number">0</variable>
+        <variable constant="0" name="tranformado" sid="4415904519994325" static="0" type="number">0</variable>
+        <variable constant="0" name="muscPlay" sid="1905358887993338" static="0" type="number">1</variable>
+        <variable constant="0" name="vidas" sid="8059953450143243" static="0" type="number">5</variable>
+        <variable constant="0" name="tiempo" sid="3396809544671563" static="0" type="number">60</variable>
+        <variable constant="0" name="salud" sid="8361677864948443" static="0" type="number">250</variable>
+        <event-group collapsed="1" description="" sid="1651399251563562" title="sam">
+            <sub-events>
+                <event-block sid="7275779642162156">
+                    <conditions>
+                        <condition behavior="Platform" id="8" name="On moved" sid="4967616078999539" type="Sam" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5683933241463769" type="Sam">
+                            <param id="0" name="Animation">&quot;mov&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2619278534557529">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="6989193985006935" type="Sam" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6291779886522467" type="Sam">
+                            <param id="0" name="Animation">&quot;quieto&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5578770471334443">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="3347313414175522" type="teclasSam">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="9359385779572826" type="Sam">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1862533440183987">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6388275409026767" type="teclasSam">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="5763339688535824" type="Sam">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6304235047241233">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="8063234440578868" type="Sam" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="63512059438876" type="Sam">
+                            <param id="0" name="Animation">&quot;sal&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1997290995476255">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="4753998988652657" type="Sam" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9869589356701038">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="7920947194588693" type="Sam" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8411615350418371" type="Sam">
+                                    <param id="0" name="Animation">&quot;mov&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8941005820260576">
+                            <conditions>
+                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="1590143383106593" type="Sam" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5315336512646794" type="Sam">
+                                    <param id="0" name="Animation">&quot;quieto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="1007594545604055" title="alkain">
+            <sub-events>
+                <event-block sid="584734737908673">
+                    <conditions>
+                        <condition behavior="Platform" id="8" name="On moved" sid="3566967312864804" type="alkain" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1055777454083064" type="alkain">
+                            <param id="0" name="Animation">&quot;mov&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5444101028099078">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="4028055048094497" type="alkain" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5262804589884096" type="alkain">
+                            <param id="0" name="Animation">&quot;quieto&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2328703012793638">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="5924503114696297" type="teclasSam">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="990665986756733" type="alkain">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="3770298785872076" type="alkain">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2368889329337844">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="4063923337395437" type="teclasSam">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="3126334132782527" type="alkain">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="9348446623609199" type="alkain">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1231302491737058">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="2080836712855217" type="alkain" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2817043400797491" type="alkain">
+                            <param id="0" name="Animation">&quot;salto&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3248117957185951">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="1601429391767858" type="alkain" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9730902675195971">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="8860827235082968" type="alkain" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7636855531353509" type="alkain">
+                                    <param id="0" name="Animation">&quot;mov&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3743721851937685">
+                            <conditions>
+                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="5424692320733187" type="alkain" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1838487598790481" type="alkain">
+                                    <param id="0" name="Animation">&quot;quieto&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="8629019533117536" title="electro">
+            <sub-events>
+                <event-block sid="2172111705302251">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="8976483280193131" type="teclasSam">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="4334982157988994" type="electro">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7278893875889423">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="1777446482399402" type="teclasSam">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="2807773065100675" type="electro">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="9909121574115246">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7262960750570329" type="teclasSam">
+                            <param id="0" name="Key">88 (X)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="3815729953361923" type="electro">
+                            <param id="0" name="Object">electrobola</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">&quot;eletromano&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="827670439715644">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="7074222174037542" type="electro" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3925626367922235" type="electrobola">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="673479883317499" title="glacier">
+            <sub-events>
+                <event-block sid="8823589081185967">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="5827198879817986" type="teclasSam">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="4608463560992896" type="glacier">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="374842300468984">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="2211193084790519" type="teclasSam">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="2563786378392062" type="glacier">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7281491745032642">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6141058357101406" type="teclasSam">
+                            <param id="0" name="Key">88 (X)</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="1165412239881708" type="glacier" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3960775507429739" type="glacier">
+                            <param id="0" name="Animation">&quot;poder&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8096477489157093" type="glacier">
+                            <param id="0" name="Object">hielo</param>
+                            <param id="1" name="Layer">&quot;pri&quot;</param>
+                            <param id="2" name="Image point">&quot;manop&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1260283803991166" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3740086517909285" type="hielo" />
+                        <action id="-16" name="Wait" sid="5152573198026737" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5220722777923666" type="glacier">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6859657296861248">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6480368218812439" type="teclasSam">
+                            <param id="0" name="Key">88 (X)</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="4958638714322676" type="glacier" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8792282511639384" type="glacier">
+                            <param id="0" name="Animation">&quot;poder&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="5433179623161681" type="glacier">
+                            <param id="0" name="Object">hielo</param>
+                            <param id="1" name="Layer">&quot;pri&quot;</param>
+                            <param id="2" name="Image point">&quot;manop&quot;</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="4236629848526145" type="hielo">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9592322032179938" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="1960554488745599" type="hielo" />
+                        <action id="-16" name="Wait" sid="7252140476655753" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="9997623029101324" type="glacier">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1737665958885488">
+                    <conditions>
+                        <condition behavior="Platform" id="8" name="On moved" sid="2288441991443323" type="glacier" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="637782671055596" type="glacier">
+                            <param id="0" name="Animation">&quot;mov&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="8016527806852016" title="tranformacion">
+            <sub-events>
+                <event-block sid="2667257207029829">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5824528826707843" type="System">
+                            <param id="0" name="Variable">tranformado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="6051345145397001" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="4773517316888536" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="1417478109147496" type="tiempo">
+                            <param id="0" name="Height">(tiempo*18)/60</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9563935103072587">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6276037602047739" type="System">
+                            <param id="0" name="Variable">tranformado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="6508476065724342" type="tiempo">
+                            <param id="0" name="Height">(tiempo*18)/60</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8947826570512436">
+                    <conditions>
+                        <condition id="-16" name="Is on layer" sid="8022974205033868" type="Sam">
+                            <param id="0" name="Layer">&quot;pri&quot;</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="5674625078498073" type="teclasSam">
+                            <param id="0" name="Key">85 (U)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="5299568520930241" type="System">
+                            <param id="0" name="Object to create">electro</param>
+                            <param id="1" name="Layer">&quot;pri&quot;</param>
+                            <param id="2" name="X">Sam.X</param>
+                            <param id="3" name="Y">Sam.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9682028210770355" type="Sam" />
+                        <action id="-16" name="Wait" sid="6322801005874324" type="System">
+                            <param id="0" name="Seconds">10*60</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9564878636662162" type="System">
+                            <param id="0" name="Variable">tranformado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5044196254298556" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">60</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4574715393647258">
+                    <conditions>
+                        <condition id="-16" name="Is on layer" sid="611424361584651" type="Sam">
+                            <param id="0" name="Layer">&quot;pri&quot;</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="5624202984503727" type="teclasSam">
+                            <param id="0" name="Key">75 (K)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="912232655134115" type="System">
+                            <param id="0" name="Object to create">alkain</param>
+                            <param id="1" name="Layer">&quot;pri&quot;</param>
+                            <param id="2" name="X">Sam.X</param>
+                            <param id="3" name="Y">Sam.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7770809083409903" type="Sam" />
+                        <action id="-9" name="Set value" sid="6491054144821034" type="System">
+                            <param id="0" name="Variable">tranformado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7446426420938523" type="System">
+                            <param id="0" name="Seconds">tiempo</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="8757521308140857" type="System">
+                            <param id="0" name="Object to create">Sam</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">alkain.X</param>
+                            <param id="3" name="Y">alkain.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2454650119529422" type="System">
+                            <param id="0" name="Variable">tranformado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7115622841659374" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">60</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7846870329944487" type="alkain" />
+                    </actions>
+                </event-block>
+                <event-block sid="2361791379087978">
+                    <conditions>
+                        <condition id="-16" name="Is on layer" sid="2387033073901829" type="Sam">
+                            <param id="0" name="Layer">&quot;pri&quot;</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="9048711891027068" type="teclasSam">
+                            <param id="0" name="Key">74 (J)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7040131372611055" type="System">
+                            <param id="0" name="Object to create">glacier</param>
+                            <param id="1" name="Layer">&quot;pri&quot;</param>
+                            <param id="2" name="X">sam.X</param>
+                            <param id="3" name="Y">sam.Y</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9442943978021924" type="Sam" />
+                        <action id="-9" name="Set value" sid="1460249311932529" type="System">
+                            <param id="0" name="Variable">tranformado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6433537874018382" type="System">
+                            <param id="0" name="Seconds">tiempo</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7703028420710282" type="System">
+                            <param id="0" name="Seconds">tiempo</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1552985175529948" type="System">
+                            <param id="0" name="Object to create">Sam</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">glacier.X</param>
+                            <param id="3" name="Y">glacier.Y</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="314867993650169" type="System">
+                            <param id="0" name="Variable">tranformado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7356406505546304" type="System">
+                            <param id="0" name="Variable">tiempo</param>
+                            <param id="1" name="Value">60</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2162263345554613" type="glacier" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2636344706148273" title="plataforma">
+            <sub-events>
+                <event-block sid="6110004594495814">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5045088598899838" type="Sam">
+                            <param id="0" name="Object">robot1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="9335710556316347" type="System">
+                            <param id="0" name="Variable">salud</param>
+                            <param id="1" name="Value">robot1.daño</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5720612344066361">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8880302760546839" type="electro">
+                            <param id="0" name="Object">robot1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="4478630418386579" type="System">
+                            <param id="0" name="Variable">salud</param>
+                            <param id="1" name="Value">robot1.daño/2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3895444701916269">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="773826758274582" type="alkain">
+                            <param id="0" name="Object">robot1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="9858560355550776" type="System">
+                            <param id="0" name="Variable">salud</param>
+                            <param id="1" name="Value">robot1.daño</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4512623642986741">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4446019099907667" type="robot1">
+                            <param id="0" name="Object">electrobola</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="5796302034446983" type="robot1">
+                            <param id="0" name="Instance variable">vida</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6951882628947198" type="electrobola" />
+                        <action id="4" name="Set animation" sid="9393787487045977" type="robot1">
+                            <param id="0" name="Animation">&quot;eletrificado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6118656254153111" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5725035537471643" type="robot1">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7120366291691061">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9821227659972308" type="robot1">
+                            <param id="0" name="Instance variable">vida</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="7934310165436742" type="System">
+                            <param id="0" name="Variable">score</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9632905354698287" type="robot1" />
+                    </actions>
+                </event-block>
+                <event-block sid="376918988587275">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1927434435783096" type="robot1">
+                            <param id="0" name="Object">hielo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="3860990216465631" type="robot1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6795863133630543" type="robot1">
+                            <param id="0" name="Animation">&quot;congelado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9675693832252382" type="System">
+                            <param id="0" name="Seconds">robot1.Rh</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="2691605582189102" type="robot1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="6972018434440511" type="robot1">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="4632522823130211">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="8097150855489674" type="robot2" />
+                <condition id="-6" name="Every X seconds" sid="6690372585838503" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="8220805017377008" type="robot2">
+                    <param id="0" name="Object">balarobot2</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">&quot;canon&quot;</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1135400922590039" type="balarobot2">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="-16" name="Wait" sid="763691441257077" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="96349517849603">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1535304623601955" type="balarobot2">
+                    <param id="0" name="Object">Sam</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="4253341998418742" type="System">
+                    <param id="0" name="Variable">salud</param>
+                    <param id="1" name="Value">23</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>ganar mapa</comment>
+        <event-block bookmark="1" sid="3847836204739638">
+            <conditions>
+                <condition id="-31" inverted="1" name="Object UID exists" sid="9399330973843725" type="System">
+                    <param id="0" name="UID">35</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9583143027497162" type="System">
+                    <param id="0" name="Layout">ganado</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2088308555037531">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3214964757140954" type="System">
+                    <param id="0" name="Variable">vidas</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1538335040892915" type="System">
+                    <param id="0" name="Layout">perdido</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="" sid="5987939228594822" title="hud">
+            <sub-events>
+                <event-block sid="4838820314940004">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2572476431780199" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4200191065523518" type="Text">
+                            <param id="0" name="Text">&quot;XP:&quot;&amp;score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8535276680228626">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2544216535743657" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="861654766522581" type="barravida">
+                            <param id="0" name="Width">(salud*271)/250</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="2087488329465533" type="corazones">
+                            <param id="0" name="Width">25*vidas</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="315513955219761">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7531356554712641" type="System">
+                            <param id="0" name="Variable">salud</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="9596229720059994" type="System">
+                            <param id="0" name="Variable">vidas</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3340599476120817" type="System">
+                            <param id="0" name="Variable">salud</param>
+                            <param id="1" name="Value">250</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1035186952709141" title="otros">
+            <sub-events>
+                <event-block sid="3119609662668107">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="993894041018117" type="teclasSam">
+                            <param id="0" name="Key">83 (S)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="9911006203093027" type="System">
+                            <param id="0" name="Variable">salud</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3613943625525244">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="374221759743997" type="teclasSam">
+                            <param id="0" name="Key">123 (F12)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="3090594517454565" type="System">
+                            <param id="0" name="Layout">ganado</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6712269550378727">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="5411207741803305" type="teclasSam">
+                            <param id="0" name="Key">77 (M)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="939244061215295" type="System">
+                            <param id="0" name="Variable">muscPlay</param>
+                            <param id="1" name="Value">-muscPlay</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2984319643299914">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1004643682510067" type="System">
+                            <param id="0" name="Variable">muscPlay</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="9176294919630286" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5183690287877548">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="461751886534108" type="System">
+                            <param id="0" name="Variable">muscPlay</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="5003885278275529" type="Audio">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1716816615342606">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6684928554045806" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="4138760148467507" type="Audio">
+                            <param id="0" name="Audio file">fondo</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">12</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block disabled="1" sid="1669009473307749">
+            <conditions>
+                <condition disabled="1" id="-33" name="Pick by comparison" sid="4921530220838838" type="System">
+                    <param id="0" name="Object">glacier</param>
+                    <param id="1" name="Expression">glacier.X</param>
+                    <param id="2" name="Comparison">5</param>
+                    <param id="3" name="Value">LayoutWidth-glacier.Width</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3041013374128275" type="System">
+                    <param id="0" name="Layout">ganado</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
