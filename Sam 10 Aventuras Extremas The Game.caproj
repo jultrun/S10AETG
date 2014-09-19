@@ -155,7 +155,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Text" sid="5348757500540164">
+        <object-type name="score" sid="5348757500540164">
             <plugin id="Text" />
         </object-type>
         <object-type name="Audio" sid="8545675019641176">
@@ -517,8 +517,7 @@
     <event-folder expanded="1">
         <event-sheet>menu.xml</event-sheet>
         <event-sheet>mapa 1.xml</event-sheet>
-        <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet 3.xml</event-sheet>
+        <event-sheet>intruciones.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="teclasSam" uid="10" />

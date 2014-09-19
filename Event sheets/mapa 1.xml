@@ -726,7 +726,7 @@
                         <condition id="-1" name="Every tick" sid="2572476431780199" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="4200191065523518" type="Text">
+                        <action id="0" name="Set text" sid="4200191065523518" type="score">
                             <param id="0" name="Text">&quot;XP:&quot;&amp;score</param>
                         </action>
                     </actions>
