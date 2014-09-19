@@ -148,7 +148,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <vida>100</vida>
+                        <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
                     </instance-variables>
@@ -190,7 +190,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <vida>100</vida>
+                        <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
                     </instance-variables>
@@ -232,7 +232,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <vida>100</vida>
+                        <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
                     </instance-variables>
@@ -316,7 +316,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <vida>100</vida>
+                        <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
                     </instance-variables>
@@ -358,7 +358,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <vida>100</vida>
+                        <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
                     </instance-variables>
@@ -464,7 +464,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <vida>100</vida>
+                        <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
                     </instance-variables>
@@ -506,7 +506,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <vida>100</vida>
+                        <vida>20</vida>
                         <daño>10</daño>
                         <Rh>10</Rh>
                     </instance-variables>

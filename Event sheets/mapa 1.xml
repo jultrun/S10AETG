@@ -407,8 +407,18 @@
                             <param id="3" name="Y">Sam.Y</param>
                         </action>
                         <action id="-9" name="Destroy" sid="9682028210770355" type="Sam" />
+                        <action id="-9" name="Set value" sid="4163588554360208" type="System">
+                            <param id="0" name="Variable">tranformado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="6322801005874324" type="System">
-                            <param id="0" name="Seconds">10*60</param>
+                            <param id="0" name="Seconds">tiempo</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1315064134814739" type="System">
+                            <param id="0" name="Object to create">Sam</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">electro.X</param>
+                            <param id="3" name="Y">electro.Y</param>
                         </action>
                         <action id="-9" name="Set value" sid="9564878636662162" type="System">
                             <param id="0" name="Variable">tranformado</param>
@@ -418,6 +428,7 @@
                             <param id="0" name="Variable">tiempo</param>
                             <param id="1" name="Value">60</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="3568118125422505" type="electro" />
                     </actions>
                 </event-block>
                 <event-block sid="4574715393647258">
@@ -485,9 +496,6 @@
                         <action id="-16" name="Wait" sid="6433537874018382" type="System">
                             <param id="0" name="Seconds">tiempo</param>
                         </action>
-                        <action id="-16" name="Wait" sid="7703028420710282" type="System">
-                            <param id="0" name="Seconds">tiempo</param>
-                        </action>
                         <action id="-3" name="Create object" sid="1552985175529948" type="System">
                             <param id="0" name="Object to create">Sam</param>
                             <param id="1" name="Layer">0</param>
@@ -509,45 +517,62 @@
         </event-group>
         <event-group description="" sid="2636344706148273" title="plataforma">
             <sub-events>
-                <event-block sid="6110004594495814">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="5045088598899838" type="Sam">
-                            <param id="0" name="Object">robot1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="9335710556316347" type="System">
-                            <param id="0" name="Variable">salud</param>
-                            <param id="1" name="Value">robot1.daño</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5720612344066361">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="8880302760546839" type="electro">
-                            <param id="0" name="Object">robot1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="4478630418386579" type="System">
-                            <param id="0" name="Variable">salud</param>
-                            <param id="1" name="Value">robot1.daño/2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3895444701916269">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="773826758274582" type="alkain">
-                            <param id="0" name="Object">robot1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="9858560355550776" type="System">
-                            <param id="0" name="Variable">salud</param>
-                            <param id="1" name="Value">robot1.daño</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="4100906625120901" title="daños sam">
+                    <sub-events>
+                        <event-block sid="6110004594495814">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5045088598899838" type="Sam">
+                                    <param id="0" name="Object">robot1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="9335710556316347" type="System">
+                                    <param id="0" name="Variable">salud</param>
+                                    <param id="1" name="Value">robot1.daño</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5720612344066361">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8880302760546839" type="electro">
+                                    <param id="0" name="Object">robot1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="4478630418386579" type="System">
+                                    <param id="0" name="Variable">salud</param>
+                                    <param id="1" name="Value">robot1.daño/2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3895444701916269">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="773826758274582" type="alkain">
+                                    <param id="0" name="Object">robot1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="9858560355550776" type="System">
+                                    <param id="0" name="Variable">salud</param>
+                                    <param id="1" name="Value">robot1.daño</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4820509699138046">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="9376192254692433" type="glacier">
+                                    <param id="0" name="Object">robot1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="717183857753523" type="System">
+                                    <param id="0" name="Variable">salud</param>
+                                    <param id="1" name="Value">robot1.daño</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-block sid="4512623642986741">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4446019099907667" type="robot1">
@@ -615,69 +640,70 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="4632522823130211">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="8097150855489674" type="robot2" />
+                        <condition id="-6" name="Every X seconds" sid="6690372585838503" type="System">
+                            <param id="0" name="Interval (seconds)">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="8220805017377008" type="robot2">
+                            <param id="0" name="Object">balarobot2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">&quot;canon&quot;</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="1135400922590039" type="balarobot2">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="763691441257077" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="96349517849603">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1535304623601955" type="balarobot2">
+                            <param id="0" name="Object">Sam</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="4253341998418742" type="System">
+                            <param id="0" name="Variable">salud</param>
+                            <param id="1" name="Value">23</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="5282495835722692" type="balarobot2" />
+                    </actions>
+                </event-block>
+                <comment>ganar mapa</comment>
+                <event-block bookmark="1" sid="3847836204739638">
+                    <conditions>
+                        <condition id="-31" inverted="1" name="Object UID exists" sid="9399330973843725" type="System">
+                            <param id="0" name="UID">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="9583143027497162" type="System">
+                            <param id="0" name="Layout">ganado</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2088308555037531">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3214964757140954" type="System">
+                            <param id="0" name="Variable">vidas</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="1538335040892915" type="System">
+                            <param id="0" name="Layout">perdido</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="4632522823130211">
-            <conditions>
-                <condition id="-3" name="Is on-screen" sid="8097150855489674" type="robot2" />
-                <condition id="-6" name="Every X seconds" sid="6690372585838503" type="System">
-                    <param id="0" name="Interval (seconds)">3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="8220805017377008" type="robot2">
-                    <param id="0" name="Object">balarobot2</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">&quot;canon&quot;</param>
-                </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1135400922590039" type="balarobot2">
-                    <param id="0" name="Angle">180</param>
-                </action>
-                <action id="-16" name="Wait" sid="763691441257077" type="System">
-                    <param id="0" name="Seconds">4</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="96349517849603">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1535304623601955" type="balarobot2">
-                    <param id="0" name="Object">Sam</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="4253341998418742" type="System">
-                    <param id="0" name="Variable">salud</param>
-                    <param id="1" name="Value">23</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>ganar mapa</comment>
-        <event-block bookmark="1" sid="3847836204739638">
-            <conditions>
-                <condition id="-31" inverted="1" name="Object UID exists" sid="9399330973843725" type="System">
-                    <param id="0" name="UID">35</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="9583143027497162" type="System">
-                    <param id="0" name="Layout">ganado</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2088308555037531">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="3214964757140954" type="System">
-                    <param id="0" name="Variable">vidas</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="1538335040892915" type="System">
-                    <param id="0" name="Layout">perdido</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group collapsed="1" description="" sid="5987939228594822" title="hud">
             <sub-events>
                 <event-block sid="4838820314940004">
@@ -724,7 +750,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1035186952709141" title="otros">
+        <event-group collapsed="1" description="" sid="1035186952709141" title="otros">
             <sub-events>
                 <event-block sid="3119609662668107">
                     <conditions>
@@ -809,20 +835,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="1669009473307749">
-            <conditions>
-                <condition disabled="1" id="-33" name="Pick by comparison" sid="4921530220838838" type="System">
-                    <param id="0" name="Object">glacier</param>
-                    <param id="1" name="Expression">glacier.X</param>
-                    <param id="2" name="Comparison">5</param>
-                    <param id="3" name="Value">LayoutWidth-glacier.Width</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="3041013374128275" type="System">
-                    <param id="0" name="Layout">ganado</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
