@@ -35,7 +35,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-1</x>
+                        <x>25</x>
                         <y>-1</y>
                         <z>0</z>
                         <width>885</width>
@@ -49,7 +49,7 @@
                 </instance>
                 <instance type="textoIntr" uid="4">
                     <properties>
-                        <text>flechas: moverse  CRTL poder especial  U electrofantasmal    k alkain                    </text>
+                        <text>en su evento</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>0,0,0</color>
@@ -62,10 +62,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>419</x>
-                        <y>77</y>
+                        <x>413</x>
+                        <y>66</y>
                         <z>0</z>
-                        <width>161</width>
+                        <width>264</width>
                         <height>272</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

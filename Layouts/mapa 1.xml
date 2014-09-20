@@ -615,7 +615,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="tiempo" uid="25">
+                <instance type="tiempoSprite" uid="25">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

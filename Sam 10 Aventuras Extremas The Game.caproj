@@ -55,7 +55,7 @@
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="fondoMenu" sid="3466072919516569">
             <plugin id="TiledBg" />
             <texture />
@@ -285,7 +285,17 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7992518879692885" speed="5">
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7992518879692885" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739">
+                        <collision-poly>
+                            <point x="0.5" y="0" />
+                            <point x="0.857954" y="0.288044" />
+                            <point x="0.863636" y="0.869565" />
+                            <point x="0.5" y="1" />
+                            <point x="0.136364" y="0.869565" />
+                            <point x="0.142046" y="0.320652" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.521739">
                         <collision-poly>
                             <point x="0.5" y="0" />
@@ -350,7 +360,7 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="tiempo" sid="9082262616133786">
+        <object-type name="tiempoSprite" sid="9082262616133786">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8466180633483667" speed="5">
@@ -518,6 +528,7 @@
         <event-sheet>menu.xml</event-sheet>
         <event-sheet>mapa 1.xml</event-sheet>
         <event-sheet>intruciones.xml</event-sheet>
+        <event-sheet>controles.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="teclasSam" uid="10" />
@@ -543,8 +554,8 @@
         <file name="fondo.ogg" />
         <file name="fondo.wav" />
     </music-folder>
-    <files-folder expanded="1">
-        <file-folder expanded="1" name="Icons">
+    <files-folder expanded="0">
+        <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />
             <file name="icon-114.png" />

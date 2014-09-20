@@ -7,6 +7,7 @@
         <variable constant="0" name="tranformado" sid="4415904519994325" static="0" type="number">0</variable>
         <variable constant="0" name="muscPlay" sid="1905358887993338" static="0" type="number">1</variable>
         <variable constant="0" name="vidas" sid="8059953450143243" static="0" type="number">5</variable>
+        <variable constant="1" name="TIEMPOMAX" sid="2175803595759397" static="0" type="number">60</variable>
         <variable constant="0" name="tiempo" sid="3396809544671563" static="0" type="number">60</variable>
         <variable constant="0" name="salud" sid="8361677864948443" static="0" type="number">250</variable>
         <event-group collapsed="1" description="" sid="1651399251563562" title="sam">
@@ -35,8 +36,10 @@
                 </event-block>
                 <event-block sid="5578770471334443">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="3347313414175522" type="teclasSam">
-                            <param id="0" name="Key">39 (Right arrow)</param>
+                        <condition id="-8" name="Compare two values" sid="2894647594701165" type="System">
+                            <param id="0" name="First value">Sam.Platform.VectorX</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -47,8 +50,10 @@
                 </event-block>
                 <event-block sid="1862533440183987">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="6388275409026767" type="teclasSam">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                        <condition id="-8" name="Compare two values" sid="1133851225782601" type="System">
+                            <param id="0" name="First value">Sam.Platform.VectorX</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -197,12 +202,14 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="8629019533117536" title="electro">
+        <event-group description="" sid="8629019533117536" title="electro">
             <sub-events>
                 <event-block sid="2172111705302251">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="8976483280193131" type="teclasSam">
-                            <param id="0" name="Key">39 (Right arrow)</param>
+                        <condition id="-8" name="Compare two values" sid="8976483280193131" type="System">
+                            <param id="0" name="First value">electro.8Direction.VectorX</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -213,8 +220,10 @@
                 </event-block>
                 <event-block sid="7278893875889423">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="1777446482399402" type="teclasSam">
-                            <param id="0" name="Key">37 (Left arrow)</param>
+                        <condition id="-8" name="Compare two values" sid="1777446482399402" type="System">
+                            <param id="0" name="First value">electro.8Direction.VectorX</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -353,7 +362,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8016527806852016" title="tranformacion">
+        <event-group collapsed="1" description="" sid="8016527806852016" title="tranformacion">
             <sub-events>
                 <event-block sid="2667257207029829">
                     <conditions>
@@ -371,8 +380,8 @@
                             <param id="0" name="Variable">tiempo</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-6" name="Set height" sid="1417478109147496" type="tiempo">
-                            <param id="0" name="Height">(tiempo*18)/60</param>
+                        <action id="-6" name="Set height" sid="1417478109147496" type="tiempoSprite">
+                            <param id="0" name="Height">(tiempo*tiempoSprite.Width)/60</param>
                         </action>
                     </actions>
                 </event-block>
@@ -385,8 +394,8 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-6" name="Set height" sid="6508476065724342" type="tiempo">
-                            <param id="0" name="Height">(tiempo*18)/60</param>
+                        <action id="-6" name="Set height" sid="6508476065724342" type="tiempoSprite">
+                            <param id="0" name="Height">(tiempo*tiempoSprite.Width)/60</param>
                         </action>
                     </actions>
                 </event-block>
@@ -426,7 +435,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="5044196254298556" type="System">
                             <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">60</param>
+                            <param id="1" name="Value">TIEMPOMAX</param>
                         </action>
                         <action id="-9" name="Destroy" sid="3568118125422505" type="electro" />
                     </actions>
@@ -467,7 +476,7 @@
                         </action>
                         <action id="-9" name="Set value" sid="7115622841659374" type="System">
                             <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">60</param>
+                            <param id="1" name="Value">TIEMPOMAX</param>
                         </action>
                         <action id="-9" name="Destroy" sid="7846870329944487" type="alkain" />
                     </actions>
@@ -508,14 +517,14 @@
                         </action>
                         <action id="-9" name="Set value" sid="7356406505546304" type="System">
                             <param id="0" name="Variable">tiempo</param>
-                            <param id="1" name="Value">60</param>
+                            <param id="1" name="Value">TIEMPOMAX</param>
                         </action>
                         <action id="-9" name="Destroy" sid="2162263345554613" type="glacier" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2636344706148273" title="plataforma">
+        <event-group collapsed="1" description="" sid="2636344706148273" title="plataforma">
             <sub-events>
                 <event-group description="" sid="4100906625120901" title="daños sam">
                     <sub-events>
@@ -524,6 +533,7 @@
                                 <condition id="0" name="On collision with another object" sid="5045088598899838" type="Sam">
                                     <param id="0" name="Object">robot1</param>
                                 </condition>
+                                <condition behavior="Sine" id="0" name="Is active" sid="2603461970655618" type="robot1" />
                             </conditions>
                             <actions>
                                 <action id="-11" name="Subtract from" sid="9335710556316347" type="System">
@@ -537,6 +547,7 @@
                                 <condition id="0" name="On collision with another object" sid="8880302760546839" type="electro">
                                     <param id="0" name="Object">robot1</param>
                                 </condition>
+                                <condition behavior="Sine" id="0" name="Is active" sid="2919709470881289" type="robot1" />
                             </conditions>
                             <actions>
                                 <action id="-11" name="Subtract from" sid="4478630418386579" type="System">
@@ -550,6 +561,7 @@
                                 <condition id="0" name="On collision with another object" sid="773826758274582" type="alkain">
                                     <param id="0" name="Object">robot1</param>
                                 </condition>
+                                <condition behavior="Sine" id="0" name="Is active" sid="2940321873663552" type="robot1" />
                             </conditions>
                             <actions>
                                 <action id="-11" name="Subtract from" sid="9858560355550776" type="System">
@@ -563,6 +575,7 @@
                                 <condition id="0" name="On collision with another object" sid="9376192254692433" type="glacier">
                                     <param id="0" name="Object">robot1</param>
                                 </condition>
+                                <condition behavior="Sine" id="0" name="Is active" sid="2029507534888245" type="robot1" />
                             </conditions>
                             <actions>
                                 <action id="-11" name="Subtract from" sid="717183857753523" type="System">
@@ -765,7 +778,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="1035186952709141" title="otros">
+        <event-group description="" sid="1035186952709141" title="otros">
             <sub-events>
                 <event-block sid="3119609662668107">
                     <conditions>

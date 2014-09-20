@@ -13,5 +13,23 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="1878311973632996">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7276116170684691" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2325518204383203" type="textoIntr">
+                    <param id="0" name="Text">&quot;Flechas: moverse &#x0D;&#x0A;CRTL: poder especial  &#x0D;&#x0A;U: Electrofantasmal&#x0D;&#x0A;se mueve libremente. lanza bolas de electricidad que dañan al enimigo por un tiempo    &#x0D;&#x0A;K: Alkain&#x0D;&#x0A;J: Glacier&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9303001779804337">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7161776252101509" type="teclasSam">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
     </events>
 </c2eventsheet>

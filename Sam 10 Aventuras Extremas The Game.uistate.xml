@@ -12,10 +12,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>mapa 1</layout>
         <layout>menu</layout>
-        <layout active="1">instruciones</layout>
-        <layout>objetos</layout>
-        <layout>perdido</layout>
         <layout>ganado</layout>
+        <event-sheet active="1">mapa 1</event-sheet>
+        <event-sheet>menu</event-sheet>
+        <event-sheet>intruciones</event-sheet>
+        <event-sheet>controles</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
