@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>perder</name>
+    <events>
+        <event-block sid="5457846327756689">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9824415403636658" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="1027357997478153" type="Audio" />
+                <action id="0" name="Play" sid="3597502107014819" type="Audio">
+                    <param id="0" name="Audio file">lose</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">12</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

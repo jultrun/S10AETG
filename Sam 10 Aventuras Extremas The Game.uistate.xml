@@ -13,10 +13,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout active="1">mapa 1</layout>
         <layout>menu</layout>
         <layout>ganado</layout>
+        <layout>perdido</layout>
         <event-sheet>mapa 1</event-sheet>
-        <event-sheet>menu</event-sheet>
         <event-sheet>intruciones</event-sheet>
         <event-sheet>controles</event-sheet>
+        <event-sheet>perder</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

@@ -529,6 +529,7 @@
         <event-sheet>mapa 1.xml</event-sheet>
         <event-sheet>intruciones.xml</event-sheet>
         <event-sheet>controles.xml</event-sheet>
+        <event-sheet>perder.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="teclasSam" uid="10" />
@@ -549,10 +550,9 @@
         </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
-    <music-folder expanded="0">
-        <file name="fondo.m4a" />
+    <music-folder expanded="1">
         <file name="fondo.ogg" />
-        <file name="fondo.wav" />
+        <file name="lose.ogg" />
     </music-folder>
     <files-folder expanded="0">
         <file-folder expanded="0" name="Icons">
