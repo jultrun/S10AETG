@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <event-block sid="2675199962182696">
+            <conditions>
+                <condition id="5" name="Key code is down" sid="8811723433606565" type="Keyboard">
+                    <param id="0" name="Keycode">u</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="4263013649078688" type="Sprite">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3935935351562566">
+            <conditions>
+                <condition id="5" name="Key code is down" sid="8004102364761398" type="Keyboard">
+                    <param id="0" name="Keycode">u</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" disabled="1" id="7" name="Simulate control" sid="8880198796314297" type="Sprite">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8497368388131338">
+            <conditions>
+                <condition id="5" name="Key code is down" sid="3217708290471864" type="Keyboard">
+                    <param id="0" name="Keycode">l</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="9715646128853708" type="Sprite">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4256805316400287">
+            <conditions>
+                <condition id="5" name="Key code is down" sid="5509861058586302" type="Keyboard">
+                    <param id="0" name="Keycode">r</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="4867800178472427" type="Sprite">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

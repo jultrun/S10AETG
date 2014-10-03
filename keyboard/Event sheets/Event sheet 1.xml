@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="l" sid="1227808298361683" static="0" type="number">65</variable>
+        <variable constant="0" name="r" sid="7353621572204336" static="0" type="number">68</variable>
+        <variable constant="0" name="u" sid="6455637097373625" static="0" type="number">87</variable>
+        <variable constant="0" name="d" sid="7394905829644771" static="0" type="number">83</variable>
+        <event-block sid="5589111218427085">
+            <conditions>
+                <condition id="2" name="On clicked" sid="2202946413954791" type="TextBox" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="9445714873025253" type="TextBox">
+                    <param id="0" name="Instance variable">act</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="1" name="Set placeholder" sid="2078036015373401" type="TextBox">
+                    <param id="0" name="Placeholder">&quot;pulse&quot;</param>
+                </action>
+                <action id="8" name="Set unfocused" sid="3776179040473779" type="TextBox" />
+            </actions>
+        </event-block>
+        <event-block sid="6833580053389442">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="4564978238168678" type="TextBox">
+                    <param id="0" name="Instance variable">act</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9452287271720483">
+                    <conditions>
+                        <condition id="7" name="On any key released" sid="9028828820046218" type="Keyboard" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5201105204824119">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5064976203273702" type="System">
+                                    <param id="0" name="First value">TextBox.key</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;u&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9926145402541282" type="System">
+                                    <param id="0" name="Variable">u</param>
+                                    <param id="1" name="Value">Keyboard.LastKeyCode</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6205037098971148" type="TextBox">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(u)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="7082141285293082" type="TextBox">
+                                    <param id="0" name="Instance variable">act</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3040617119258593">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8745508965702182" type="System">
+                                    <param id="0" name="First value">TextBox.key</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;r&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5678885724581153" type="System">
+                                    <param id="0" name="Variable">r</param>
+                                    <param id="1" name="Value">Keyboard.LastKeyCode</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9484876106288692" type="TextBox">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(r)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="7967429228216574" type="TextBox">
+                                    <param id="0" name="Instance variable">act</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1510418540788153">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5533581722420084" type="System">
+                                    <param id="0" name="First value">TextBox.key</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;l&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7910173514259545" type="System">
+                                    <param id="0" name="Variable">l</param>
+                                    <param id="1" name="Value">Keyboard.LastKeyCode</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9380850856131661" type="TextBox">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(l)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="1174108247028433" type="TextBox">
+                                    <param id="0" name="Instance variable">act</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="366700362587617">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="1345384230395104" type="System">
+                                    <param id="0" name="First value">TextBox.key</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;d&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="197860201239856" type="System">
+                                    <param id="0" name="Variable">d</param>
+                                    <param id="1" name="Value">Keyboard.LastKeyCode</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6437030414687171" type="TextBox">
+                                    <param id="0" name="Text">Keyboard.StringFromKeyCode(d)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="6075216897436547" type="TextBox">
+                                    <param id="0" name="Instance variable">act</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1953945119485037">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2819726740519234" type="System">
+                                    <param id="0" name="First value">Keyboard.LastKeyCode</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">32</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="774274539736824" type="TextBox">
+                                    <param id="0" name="Text">&quot;espace&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3563850630835145">
+            <conditions>
+                <condition id="0" name="On clicked" sid="9596280719850303" type="Button3" />
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="9884477093764239" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
